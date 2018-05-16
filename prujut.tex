@@ -1,0 +1,42 @@
+\documentclass[a4paper, finnish]{article}
+
+\usepackage[finnish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{braket}
+\usepackage{amsmath,amssymb}
+
+\begin{document}
+
+\section{Tilastollisen kvanttimekaniikan perusteita}
+\subsection{Mikrotilat}
+
+Kvanttimekaniikan yhden hiukkasen systeemin täydellisen kuvauksen antaa sitä vastaava tilavektori $\ket{\Psi}$, joka on (yhden hiukkasen) Hilbertin avaruuteen $\mathcal{H}$ kuuluva vektori. Hilbertin avaruus on \textit{lineaarinen}, ts. kahden sen vektorin kompleksikertoimien summa kuuluu avaruuteen. $\mathcal{H}$:ssa on myös määritelty sisätulo $\braket{a|b}$, joka totetuttaa yleiset skalaaritulon aksioomat. Fysikaaliset tilat voidaan aina normittaa ykköseksi, tästä lähtien oletammekin, että kvanttitiloille $\braket{\Psi|\Psi}\equiv \|\Psi\|^2$ = 1. 
+
+Observaabeleita (havaittavia suureita) vastaavat kvanttimekaniikassa lineaariset hermittiiviset operaattorit $\widehat{\text{A}}$, jotka Schrödingerin kuvassa oletetaan ajasta riippumattomiksi. Observaabelien mahdollisia havaittavia arvoja ovat $\widehat{\text{A}}$:n ominaisarvot, jotka yhdessä vastaavien (ajasta riippumattomien) ominaistilojen kera saadaan selville ominaisarvoyhtälöstä. $\widehat{\text{A}}\ket{\text{n}}$,
+
+jonka ratkaisut on tässä yksinkertaisuuden vuoksi oletettu diskreetiksi. Kaikki alla johdettavat tulokset voidaan kuitenkin helposti yleistää tapaukseen, jossa hermittiivisen operaattorin $\widehat{\text{A}}$ ominaispekstri (eli ominaisarvot ja tilat) on jatkuva. Tällöin kaikki summat tilojen $\ket{\text{n}}$ yli korvataan yksinkertaisesti integraaleilla.
+
+Operaattorin oletetusta hermittiivisyydestä seuraa, että sen ominaisarvot ovat reaalisia ja ominaisvektorit muodostavat Hilbertin avaruuden täydellisen ortonormittuvan kannan. Voidaan siis olettaa, että ominaistilat toteuttavat relaation
+\begin{equation*}
+\braket{\text{n}|\text{m} = \delta_{\text{mn}} },
+\end{equation*}
+minkä lisäksi yksikköoperaattori voidaan kirjoittaa muodossa
+\begin{equation*}
+1 = \sum \ket{\text{n}}\bra{\text{n}}
+\end{equation*}
+Observaabelin $\widehat{\text{A}}$ odotusarvo kvanttitilassa $\ket{\Psi}$ saadaan näin kirjoitettua muotoon:
+\begin{equation*}
+\braket{\widehat{\text{A}}} = \braket{\Psi|\widehat{\text{A}}|\Psi} = \sum_{m,n} \braket{\Psi|m}\braket{m|\widehat{\text{A}}|n}\braket{n|\Psi} = \sum_n A_n\lvert\braket{n|\Psi}\rvert^2 
+\end{equation*}
+jossa tulkitsemme siten, että tekijät $\lvert\braket{n|\Psi}\rvert^2$ antavat todennäköisyyden sille, että tarkasteltavalle observaabelille saadaan mittauksessa diskreetti arvo $A_n$. 
+
+Usein on kätevää kirjoittaa tilavektorit komponenttiesityksenä sopivan hermiittisen operaattorin ortonirmitetussa kannassa.
+\begin{equation*}
+\Psi = \sum_n \braket{n|\Psi}\ket{n},
+\end{equation*}
+missä olemme käyttäneet yllä johdettua yksikköoperaattorin muotoa. Koordinaattikannassa $\ket{\vec{x}}$ vastaavat kertoimet ovat tuttuja aaltofunktioita
+\begin{equation*}
+
+\end{equation*}
+ 
+\end{document}
